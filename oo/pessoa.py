@@ -14,4 +14,4 @@ if __name__ == '__main__':
     p2 = Pessoa(p, nome='bruno torres')
 
     for f in p2.filhos:
-        print(f.nome)
+        print(f.__dict__)

@@ -55,13 +55,12 @@ class Ator():
         pass
 
 
-
 class Obstaculo(Ator):
-    pass
+    _caracter_ativo = 'O'
 
 
 class Porco(Ator):
-    pass
+    _caracter_ativo = '@'
 
 
 class DuploLancamentoExcecao(Exception):
@@ -119,7 +118,6 @@ class Passaro(Ator):
         """
         return 1, 1
 
-
     def lancar(self, angulo, tempo_de_lancamento):
         """
         Lógica que lança o pássaro. Deve armazenar o ângulo e o tempo de lançamento para posteriores cálculo.
@@ -133,8 +131,8 @@ class Passaro(Ator):
 
 
 class PassaroAmarelo(Passaro):
-    pass
+    _caracter_ativo = 'A'
 
 
 class PassaroVermelho(Passaro):
-    pass
+    _caracter_ativo = 'V'

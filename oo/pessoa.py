@@ -10,9 +10,17 @@ class Pessoa:
         return f'Olá {id(self)}'
 
 
+class Homem(Pessoa):
+    pass
+
+
+class Mutante(Pessoa):
+    olhos = 5
+
+
 if __name__ == '__main__':
 
-    p = Pessoa(nome='filho de bruno')
+    p = Mutante(nome='filho de bruno')
     p2 = Pessoa(p, nome='bruno torres')
 
     for f in p2.filhos:
@@ -29,3 +37,15 @@ if __name__ == '__main__':
     print(p2.olhos)
     del p.olhos
     print(p.olhos)
+
+    bruno = Homem(nome='Bruno')
+    print(bruno.nome)
+
+    pessoa = Pessoa('Anonimo')
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(pessoa, Homem))
+
+    print(isinstance(bruno, Pessoa))
+    print(isinstance(bruno, Homem))
+
+
